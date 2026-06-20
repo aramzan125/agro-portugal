@@ -1,5 +1,5 @@
 /**
- * VerdeCampo Portugal — Shared site logic & i18n
+ * João Prioste — Shared site logic & i18n
  */
 
 const translations = {
@@ -9,7 +9,7 @@ const translations = {
     'nav.careers': 'Careers',
     'nav.contact': 'Contact',
     'nav.apply': 'Apply Now',
-    'footer.desc': 'Leading agricultural operations across Portugal. Sustainable farming, quality produce, and opportunities for workers from Portugal and abroad.',
+    'footer.desc': 'João Prioste — production, commercialization, and wholesale of agricultural, horticultural, and fruit products. Peniche, Portugal.',
     'footer.services': 'Services',
     'footer.company': 'Company',
     'footer.careers': 'Careers',
@@ -25,7 +25,7 @@ const translations = {
     'nav.careers': 'Carreiras',
     'nav.contact': 'Contacto',
     'nav.apply': 'Candidate-se',
-    'footer.desc': 'Operações agrícolas de referência em Portugal. Agricultura sustentável, produtos de qualidade e oportunidades para trabalhadores portugueses e internacionais.',
+    'footer.desc': 'João Prioste — produção, comercialização e comércio por grosso de produtos agrícolas, hortícolas e frutícolas. Peniche, Portugal.',
     'footer.services': 'Serviços',
     'footer.company': 'Empresa',
     'footer.careers': 'Carreiras',
@@ -37,7 +37,7 @@ const translations = {
   },
 };
 
-let currentLang = localStorage.getItem('verdecampo-lang') || 'en';
+let currentLang = localStorage.getItem('joao-prioste-lang') || localStorage.getItem('verdecampo-lang') || 'pt';
 
 function t(key) {
   return translations[currentLang][key] || translations.en[key] || key;
@@ -54,7 +54,7 @@ function applyTranslations() {
 
 function setLanguage(lang) {
   currentLang = lang;
-  localStorage.setItem('verdecampo-lang', lang);
+  localStorage.setItem('joao-prioste-lang', lang);
   document.querySelectorAll('.lang-toggle button').forEach((btn) => {
     btn.classList.toggle('active', btn.dataset.lang === lang);
   });
