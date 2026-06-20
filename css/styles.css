@@ -1,5 +1,4 @@
 /* João Prioste — Corporate Design System */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 
 :root {
   --green-900: #0f2418;
@@ -21,13 +20,17 @@
   --radius: 4px;
   --radius-lg: 6px;
   --transition: 0.2s ease;
-  --font: 'Inter', 'Segoe UI', system-ui, -apple-system, sans-serif;
+  --font: "Open Sans", "Segoe UI", Roboto, Arial, Helvetica, sans-serif;
   --header-h: 76px;
 }
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-html { scroll-behavior: smooth; font-size: 16px; }
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+  font-family: var(--font);
+}
 
 body {
   font-family: var(--font);
@@ -36,6 +39,10 @@ body {
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   padding-top: var(--header-h);
+}
+
+button, input, select, textarea {
+  font-family: var(--font);
 }
 
 img { max-width: 100%; display: block; }
@@ -74,10 +81,28 @@ ul { list-style: none; }
   flex-shrink: 0;
 }
 
-.logo-mark {
+.logo-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   width: 44px;
   height: 44px;
   flex-shrink: 0;
+  background: var(--green-800);
+  color: var(--white);
+  border-radius: 4px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.9375rem;
+  font-weight: 700;
+  letter-spacing: -0.04em;
+  line-height: 1;
+  user-select: none;
+}
+
+.site-footer .logo-badge {
+  width: 40px;
+  height: 40px;
+  font-size: 0.8125rem;
 }
 
 .logo-text {
